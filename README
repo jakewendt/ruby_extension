@@ -10,7 +10,6 @@ Minor additions to some Ruby core classes.
 		downcase
 		average
 		median
-		sum
 
 	Hash
 		delete_keys_matching!(regex)
@@ -25,6 +24,4 @@ Minor additions to some Ruby core classes.
 
 	Integer
 		factorial
-		even?
-		odd?
 
