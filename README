@@ -10,6 +10,7 @@ Minor additions to some Ruby core classes.
 		downcase
 		average
 		median
+		first_index
 
 	Hash
 		delete_keys_matching!(regex)

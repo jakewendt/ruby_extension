@@ -79,6 +79,15 @@ module ArrayExtension
 		end
 		alias_method :digitize, :numericize
 
+#		def first_index(value = nil)	#	either way works
+		def first_index(value = nil, &block)
+			using_block = block_given?
+			each_with_index do |element,index|
+				return index if (using_block && yield(element)) || (value == element)
+			end
+			return nil
+		end
+
 	end
 end
 end
