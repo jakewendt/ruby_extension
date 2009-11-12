@@ -96,6 +96,25 @@ class RubyExtensionTest < ActiveSupport::TestCase
 		assert_equal %w( orange banana apple ), y
 	end
 
+	test "should find first index via argument" do
+		x = %w( apple banana orange )
+		assert_equal 1, x.first_index('banana')
+	end
+
+	test "should find first index via block" do
+		x = %w( apple banana orange )
+		assert_equal 1, x.first_index{|i| i == 'banana'}
+	end
+
+	test "should return nil for first index with empty array" do
+		assert_nil [].first_index('banana')
+	end
+
+	test "should return nil for first index with no match" do
+		x = %w( apple banana orange )
+		assert_nil x.first_index('pineapple')
+	end
+
 #	String
 
 	test "should convert url query string to hash" do
