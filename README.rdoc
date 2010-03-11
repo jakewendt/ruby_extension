@@ -1,3 +1,4 @@
+= RubyExtension
 
 Minor additions to some Ruby core classes.
 (This may be better as a gem.)
