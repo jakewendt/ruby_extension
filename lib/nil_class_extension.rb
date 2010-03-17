@@ -1,17 +1,18 @@
-module RubyExtension
+module RubyExtension	#	:nodoc:
 module NilClassExtension
 	def self.included(base)
-		base.extend(ClassMethods)
+#		base.extend(ClassMethods)
 		base.instance_eval do
 			include InstanceMethods
 		end
 	end
 
-	module ClassMethods
-	end
+#	module ClassMethods	#	:nodoc:
+#	end
 
 	module InstanceMethods
 
+		#	Return an empty array when attempting to split nil
 		def split(*args)
 			[]
 		end

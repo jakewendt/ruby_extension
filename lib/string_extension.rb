@@ -1,17 +1,19 @@
-module RubyExtension
+module RubyExtension	#	:nodoc:
 module StringExtension
   def self.included(base)
-    base.extend(ClassMethods)
+#    base.extend(ClassMethods)
     base.instance_eval do
       include InstanceMethods
     end
   end
 
-  module ClassMethods
-  end
+#  module ClassMethods	#	:nodoc:
+#  end
 
   module InstanceMethods
 
+		#	Convert a query string like that in a URL
+		#	to a Hash
 		def to_params_hash
 			h = HashWithIndifferentAccess.new
 			self.split('&').each do |p|
@@ -21,6 +23,7 @@ module StringExtension
 			return h
 		end
 
+		#	Return self
 		def uniq
 			self
 		end
