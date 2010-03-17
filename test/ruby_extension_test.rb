@@ -1,7 +1,8 @@
 require 'test/unit'
 require 'rubygems'
 require 'uri'
-require 'active_support/core_ext'
+#require 'active_support/core_ext'
+require 'active_support'
 require 'active_support/test_case'
 
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
