@@ -13,6 +13,8 @@ module ObjectExtension
 	module InstanceMethods
 
 		def to_boolean
+			return [true, 'true', 1, '1', 't'].include?(
+				( self.class == String ) ? self.downcase : self )
 		end
 
 	end
