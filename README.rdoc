@@ -27,3 +27,5 @@ Minor additions to some Ruby core classes.
 	Integer
 		factorial
 
+	Object
+		to_boolean
