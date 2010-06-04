@@ -111,8 +111,13 @@ module ArrayExtension
 
 		#	I need to work on this one ...
 		def true_xor_false?
-			self.include?('true') ^ self.include?('false') ^
-				self.include?(true) ^ self.include?(false)
+#			self.include?('true') ^ self.include?('false') ^
+#				self.include?(true) ^ self.include?(false)
+			contains_true = contains_false = false
+			each {|v|
+				( v.to_boolean ) ? contains_true = true : contains_false = true
+			}
+			contains_true ^ contains_false
 		end
 
 	end
