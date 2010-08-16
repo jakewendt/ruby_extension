@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-ruby_extension}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jake"]
@@ -22,12 +22,13 @@ Gem::Specification.new do |s|
      "VERSION",
      "init.rb",
      "jakewendt-ruby_extension.gemspec",
-     "lib/array.rb",
-     "lib/hash.rb",
-     "lib/integer.rb",
-     "lib/nil_class.rb",
-     "lib/object.rb",
-     "lib/string.rb",
+     "lib/ruby_extension.rb",
+     "lib/ruby_extension/array.rb",
+     "lib/ruby_extension/hash.rb",
+     "lib/ruby_extension/integer.rb",
+     "lib/ruby_extension/nil_class.rb",
+     "lib/ruby_extension/object.rb",
+     "lib/ruby_extension/string.rb",
      "rails/init.rb",
      "test/ruby_extension_test.rb"
   ]
