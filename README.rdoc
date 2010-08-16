@@ -1,6 +1,12 @@
 = RubyExtension
 
 
+== Usage
+
+ config.gem 'jakewendt-ruby_extension',
+   :lib    => 'ruby_extension',
+   :source => 'http://rubygems.org'
+
 == Attempting Gemification with Jeweler
 
  Added jeweler stuff to Rakefile
