@@ -14,21 +14,6 @@
  rake gemspec
  rake install
 
-Problems on jruby 1.5.1
-
- bash-3.2$ rake gems:install 
- (in /Users/jakewendt/github_repo/jakewendt/ucb_ccls_buffler)
- jruby -S gem install jakewendt-ruby_extension --source http://rubygems.com
- ERROR:  While executing gem ... (Zlib::GzipFile::Error)
-    not in gzip format
-
- bash-3.2$ gem install jakewendt-ruby_extension
- Successfully installed jakewendt-ruby_extension-1.0.0
- 1 gem installed
- Installing ri documentation for jakewendt-ruby_extension-1.0.0...
- Installing RDoc documentation for jakewendt-ruby_extension-1.0.0...
-
-
 == Notes
 
 Minor additions to some Ruby core classes.
