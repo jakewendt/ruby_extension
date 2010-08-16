@@ -1,5 +1,15 @@
 = RubyExtension
 
+
+== Attempting Gemification with Jeweler
+
+ Added jeweler stuff to Rakefile
+ rake version:write
+ rake gemspec
+ rake install
+
+== Notes
+
 Minor additions to some Ruby core classes.
 (This may be better as a gem.)
 

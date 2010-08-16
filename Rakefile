@@ -2,9 +2,27 @@
 # included with ruby.
 require 'rdoc'
 
+require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "jakewendt-ruby_extension"
+    gem.summary = %Q{one-line summary of your gem}
+    gem.description = %Q{longer description of your gem}
+    gem.email = "github@jake.otherinbox.com"
+    gem.homepage = "http://github.com/jakewendt/ruby_extension"
+    gem.authors = ["Jake"]
+    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+end
+
 
 desc 'Default: run unit tests.'
 task :default => :test
