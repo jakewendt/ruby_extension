@@ -7,6 +7,10 @@
    :lib    => 'ruby_extension',
    :source => 'http://rubygems.org'
 
+== ToDo
+
+* add legitimate text to Rakefile
+
 == Attempting Gemification with Jeweler
 
  Added jeweler stuff to Rakefile
