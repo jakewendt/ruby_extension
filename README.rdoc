@@ -1,4 +1,4 @@
-= RubyExtension
+= RubyExtension (Gem / Rails Plugin)
 
 
 == Usage
