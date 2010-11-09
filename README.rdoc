@@ -11,12 +11,8 @@
 
 * add legitimate text to Rakefile
 
-== Attempting Gemification with Jeweler
+Build test app around gem/app
 
- Added jeweler stuff to Rakefile
- rake version:write
- rake gemspec
- rake install
 
 == Notes
 
@@ -58,3 +54,20 @@ Minor additions to some Ruby core classes.
 		true? (explicitly so)
 		false? (explicitly so)
 
+
+
+== Gemified with Jeweler
+
+ vi Rakefile
+ rake version:write
+
+ rake version:bump:patch
+ rake version:bump:minor
+ rake version:bump:major
+
+ rake gemspec
+
+ rake install
+ rake release
+
+Copyright (c) 2010 [Jake Wendt], released under the MIT license

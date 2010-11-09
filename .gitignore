@@ -2,3 +2,11 @@
 versions/
 rdoc/
 pkg/
+log/*
+*sqlite3
+coverage
+coverage.data
+db/seeds.rb
+db/schema.rb
+db/*.sqlite3
+db/*.sqlite3-journal

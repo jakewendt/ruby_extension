@@ -23,7 +23,6 @@ begin
 		gem.test_files = []
 #		gem.add_dependency('chronic', '>= 0.2.3')
 
-
 	end
 	Jeweler::GemcutterTasks.new
 rescue LoadError
