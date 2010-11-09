@@ -7,11 +7,10 @@
    :lib    => 'ruby_extension',
    :source => 'http://rubygems.org'
 
+
 == ToDo
 
 * add legitimate text to Rakefile
-
-Build test app around gem/app
 
 
 == Notes
