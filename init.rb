@@ -1,1 +1,1 @@
-require 'ruby_extension'
+require 'jakewendt-ruby_extension'
