@@ -1,22 +1,20 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.10' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
-	config.gem 'jakewendt-simply_testable'	#,
-#		:lib => 'simply_testable'
+	config.gem 'jakewendt-html_test'
+	config.gem 'jakewendt-rails_extension'
 
 	config.plugin_paths = [
-		File.expand_path(File.join(File.dirname(__FILE__),'../..')),
-		File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))
+		File.expand_path(File.join(File.dirname(__FILE__),'../..'))
 	]
-	config.plugins = [:ruby_extension,
-		:html_test, :html_test_extension]
+	config.plugins = [ :ruby_extension ]
 
 	config.frameworks -= [:active_resource]
 
