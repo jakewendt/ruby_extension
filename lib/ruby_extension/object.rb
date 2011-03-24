@@ -12,18 +12,24 @@ module Object	#	:nodoc:
 
 	module InstanceMethods
 
-		#	from ActiveSupport::Callbacks::Callback
+		#	originally from ActiveSupport::Callbacks::Callback
+#	needs modified to actually work the way I'd like
+#	needs tests
+#	x(:some_method)
+#	x(Proc.new(....))
+#	x(lambda{...})
 		#	def evaluate_method(method, *args, &block)
 		def evaluate_method(method, *args, &block)
 			case method
 				when Symbol
-#		I don't quite understand the shift
+#		I don't quite understand the shift (it fails)
 #					object = args.shift
 #					object.send(method, *args, &block)
 					send(method, *args, &block)
 				when String
 					eval(method, args.first.instance_eval { binding })
 				when Proc, Method
+#	fails
 					method.call(*args, &block)
 				else
 					if method.respond_to?(kind)
