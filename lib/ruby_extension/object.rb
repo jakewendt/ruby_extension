@@ -12,6 +12,31 @@ module Object	#	:nodoc:
 
 	module InstanceMethods
 
+		#	from ActiveSupport::Callbacks::Callback
+		#	def evaluate_method(method, *args, &block)
+		def evaluate_method(method, *args, &block)
+			case method
+				when Symbol
+#		I don't quite understand the shift
+#					object = args.shift
+#					object.send(method, *args, &block)
+					send(method, *args, &block)
+				when String
+					eval(method, args.first.instance_eval { binding })
+				when Proc, Method
+					method.call(*args, &block)
+				else
+					if method.respond_to?(kind)
+						method.send(kind, *args, &block)
+					else
+						raise ArgumentError,
+							"Callbacks must be a symbol denoting the method to call, a string to be evaluated, " +
+							"a block to be invoked, or an object responding to the callback method."
+					end
+				end
+		end
+		alias_method :x, :evaluate_method
+
 		def to_boolean
 #			return [true, 'true', 1, '1', 't'].include?(
 			return ![nil, false, 'false', 0, '0', 'f'].include?(

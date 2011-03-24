@@ -16,7 +16,7 @@ Rails::Initializer.run do |config|
 	]
 	config.plugins = [ :ruby_extension ]
 
-	config.frameworks -= [:active_resource]
+	config.frameworks = [:action_controller]
 
 #	config.routes_configuration_file = File.expand_path(
 #		File.join(File.dirname(__FILE__),'..','test/config/routes.rb'))
