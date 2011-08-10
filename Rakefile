@@ -19,7 +19,8 @@ begin
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 
 		# we like to keep our gem slim
-		gem.files = FileList['lib/**/*.rb']
+		gem.files  = FileList['lib/**/*.rb']
+		gem.files += FileList['rails/init.rb']
 		gem.test_files = []
 #		gem.add_dependency('chronic', '>= 0.2.3')
 
