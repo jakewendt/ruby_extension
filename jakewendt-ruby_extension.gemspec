@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-ruby_extension}
-  s.version = "1.0.5"
+  s.version = "1.0.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jake"]
-  s.date = %q{2011-03-23}
+  s.date = %q{2011-08-10}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -23,7 +23,8 @@ Gem::Specification.new do |s|
     "lib/ruby_extension/integer.rb",
     "lib/ruby_extension/nil_class.rb",
     "lib/ruby_extension/object.rb",
-    "lib/ruby_extension/string.rb"
+    "lib/ruby_extension/string.rb",
+    "rails/init.rb"
   ]
   s.homepage = %q{http://github.com/jakewendt/ruby_extension}
   s.require_paths = ["lib"]
