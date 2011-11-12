@@ -218,6 +218,24 @@ class RubyExtensionTest < ActiveSupport::TestCase
 		assert_nil h.dig(:d,:e,:f)
 	end
 
+	#	deep_stringify_keys
+	test "should return hash with stringified keys" do
+		h = { :a => { :b => { :c => 'Gold' } } }
+		assert  h.has_key?(:a)
+		assert !h.has_key?('a')
+		assert  h[:a].has_key?(:b)
+		assert !h[:a].has_key?('b')
+		assert  h[:a][:b].has_key?(:c)
+		assert !h[:a][:b].has_key?('c')
+		s = h.deep_stringify_keys
+		assert !s.has_key?(:a)
+		assert  s.has_key?('a')
+		assert !s['a'].has_key?(:b)
+		assert  s['a'].has_key?('b')
+		assert !s['a']['b'].has_key?(:c)
+		assert  s['a']['b'].has_key?('c')
+	end
+
 #	Object
 
 	#	true?
